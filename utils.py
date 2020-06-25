@@ -43,10 +43,10 @@ def load_291(scale):
             label.append(list(f['label']))
             data.append(list(f['data']))
     
-    data = np.concatenate([d for d in data] ,axis=0)
-    label = np.concatenate([l for l in label] ,axis=0)
+    data = np.concatenate([d for d in data], axis=0)
+    label = np.concatenate([l for l in label], axis=0)
 
-    # label, data = _shuffle((label, data))
+    label, data = _shuffle((label, data))
     return label, data
 
 def load_set5(scale=2, color_space='y'):
